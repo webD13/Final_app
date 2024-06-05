@@ -4,11 +4,11 @@ from PIL import Image
 # import os
 # import boto3
 # from pdf2image import convert_from_path
-# from paddleocr import PaddleOCR
+from paddleocr import PaddleOCR
 
 app = Flask(__name__)
 
-# ocr_ar = PaddleOCR(use_angle_cls=True, lang='en', use_gpu=False, use_mkl=True, enable_mkldnn=False,  ocr_version='PP-OCRv4')
+ocr_ar = PaddleOCR(use_angle_cls=True, lang='en', use_gpu=False, use_mkl=True, enable_mkldnn=False,  ocr_version='PP-OCRv4')
 
 @app.route("/ocr_image", methods=["POST"])
 def process_image():
