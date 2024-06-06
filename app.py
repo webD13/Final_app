@@ -1,9 +1,9 @@
-# import webbrowser
+import webbrowser
 from flask import Flask, request, jsonify
 from PIL import Image
-# import os
-# import boto3
-# from pdf2image import convert_from_path
+import os
+import boto3
+from pdf2image import convert_from_path
 from paddleocr import PaddleOCR
 
 app = Flask(__name__)
